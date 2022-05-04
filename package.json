@@ -1,0 +1,11 @@
+{
+  "name": "fizzbuzz",
+  "version": "1.0.0",
+  "description": "Semana 4 Practica 1 Refactoring",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "herr-code",
+  "license": "ISC"
+}
