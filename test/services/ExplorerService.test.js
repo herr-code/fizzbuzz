@@ -18,4 +18,10 @@ describe("Tests para Explorer Service", () => {
         const explorersInNode = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
         expect(explorersInNode).toEqual(["Explorer1"]);
     });
+
+    test("Requerimiento extra: Mostrar usernames de explorers en la mision java", () => {
+        const explorers = [{mission: "node", githubUsername: "Explorer1"}, {mission: "java", githubUsername: "Explorer2"}, {mission: "java", githubUsername: "Explorer3"}];
+        const explorersInJava = ExplorerService.getExplorersUsernamesByMission(explorers, "java");
+        expect(explorersInJava).toEqual(["Explorer2", "Explorer3"]);
+    });
 });

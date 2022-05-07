@@ -3,13 +3,13 @@ const FizzbuzzService = require("./../../lib/services/FizzbuzzService");
 describe("Tests para Fizzbuzz Service", () => {
     test("Debe imprimir mensaje de error si recibe un valor que no sea número (explorer.score)", () => {
         const expected = "Error: The argument must be a number";
-        const result = FizzbuzzService.applyValidationInExplorer({name: "Explorer", score: "16"});
+        const result = FizzbuzzService.applyValidationInExplorer({name: "Explorer", score: undefined});
         expect(expected).toBe(result);
     });
 
     test("Debe imprimir el mismo valor en explorer.trick y explorer.score si no cumple con las reglas de abajo", () => {
-        const explorer1 = {name: "Explorer1", score: 1};
-        const expected = 1;
+        const explorer1 = {name: "Explorer1", score: 0};
+        const expected = 0;
         const result = FizzbuzzService.applyValidationInExplorer(explorer1);
         expect(expected).toBe(result.trick);
     });
