@@ -8,6 +8,6 @@
 // console.log(ExplorerService.getAmountOfExplorersByMission(explorers, "node"));
 // console.log(ExplorerService.getExplorersUsernamesByMission(explorers, "node"));
 
-const ExplorerController = require("./lib/controllers/ExplorerController")
-const explorersInNode = ExplorerController.getExplorersByMission("node")
-console.log("Explorers in Node: \n", explorersInNode)
+const ExplorerController = require("./lib/controllers/ExplorerController");
+const explorersInNode = ExplorerController.getExplorersByMission("node");
+console.log("Explorers in Node: \n", explorersInNode);
