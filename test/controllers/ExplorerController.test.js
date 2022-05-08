@@ -22,4 +22,14 @@ describe("Tests para Explorer Controller", () => {
         const explorersListInNode = ExplorerController.getExplorersAmonutByMission("node");
         expect(explorersListInNode).toBe(10);
     });
+
+    test("Requerimiento 4: Aplicar FizzbuzzService dado un numero", () => {
+        const fizzbuzzTrick = ExplorerController.applyFizzbuzz(15);
+        expect(fizzbuzzTrick).toBe("FIZZBUZZ");
+    });
+
+    test("Requerimiento 4: Aplicar FizzbuzzService dado un numero", () => {
+        const fizzbuzzTrick = ExplorerController.applyFizzbuzz(0);
+        expect(typeof(fizzbuzzTrick)).toBe("number");
+    });
 });
