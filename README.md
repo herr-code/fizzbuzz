@@ -86,6 +86,8 @@ Esto automatiza nuestras pruebas al hacer `git push`.
   - Request => localhost:3000/v1/explorers/java (5 resultados)
   - Request => localhost:3000/v1/explorers/groovy (0 resultados)
 
+![Animation](https://user-images.githubusercontent.com/61515833/167537674-2640bfe0-5a14-4477-9f7b-fa1b0c742d87.gif)
+
 ## :open_file_folder: Estructura de carpetas
 
 ```
