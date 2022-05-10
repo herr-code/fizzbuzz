@@ -1,6 +1,6 @@
 # :fireworks: Fizzbuzz
 
-Este repo contiene el proyecto de actividad para la semana 4 de Backend NodeJs.  
+Este repo contiene el proyecto de los ejercicios 1, 2 y 3 de la semana 4 de Mission Backend NodeJs || Innovaccion Virtual.  
 Los temas vistos esta semana son:
 
 - Código legado (modificaciones).
@@ -48,7 +48,43 @@ npm install --save-dev jest
 npm install eslint --save-dev
 ```
 
-5. El siguiente grafico representa la estructura de la solucíón:
+4. El siguiente grafico representa la estructura de la solucíón:
+
+```mermaid
+graph TD;
+    Reader-->ExplorerService;
+    FizzbuzzService;
+    ExplorerService-->ExplorerController
+    FizzbuzzService-->ExplorerController
+    ExplorerController-->Server
+```
+5. Se crearon las clases necesarias tanto para el flujo de trabajo como para las pruebas unitarias. Para simular datos de una BD se usa el archivo `explorers.json`
+
+6. Se crea el archivo `test.yml` en `fizzbuzz/.github/workflows/` con el siguiente github action:
+
+```yml
+name: Run Tests in my project every push on GitHub
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install modules
+      run: yarn
+    - name: Run tests
+      run: yarn test
+```
+Esto automatiza nuestras pruebas al hacer `git push`.
+
+## :shipit: Resultados
+
+- Endpoint 1:
+  - Request => localhost:3000/v1/explorers/node (10 resultados)
+  - Request => localhost:3000/v1/explorers/java (5 resultados)
+  - Request => localhost:3000/v1/explorers/groovy (0 resultados)
 
 ## :open_file_folder: Estructura de carpetas
 
